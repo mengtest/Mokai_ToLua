@@ -1,12 +1,14 @@
 
 CtrlNames = {
 	Prompt = "PromptCtrl",
-	Message = "MessageCtrl"
+	Message = "MessageCtrl",
+	Demo = "DemoCtrl",
 }
 
 PanelNames = {
 	"PromptPanel",	
 	"MessagePanel",
+	"DemoPanel",
 }
 
 --协议类型--

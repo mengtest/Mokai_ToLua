@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 361721742
+CRC: 1972138255
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6853eabe7ecc7bc563c2cc844a5243c6
+    Hash: 06a18731c145a71943c1d438062d92e8
   TypeTreeHash:
     serializedVersion: 2
     Hash: 609cadede0d0e6423a85ccf5ebf51340
@@ -36,5 +36,5 @@ ClassTypes:
 - Class: 224
   Script: {instanceID: 0}
 Assets:
-- Assets/Lobby/UI/PanelDemo.prefab
+- Assets/LuaFramework/Examples/Builds/Demo/DemoPanel.prefab
 Dependencies: []

@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 335329801
+CRC: 290170211
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -12,22 +12,22 @@ AssetBundleManifest:
       Dependencies:
         Dependency_0: shared_asset.unity3d
     Info_2:
-      Name: prompt_asset.unity3d
+      Name: demo.unity3d
       Dependencies: {}
     Info_3:
-      Name: shared_asset.unity3d
+      Name: prompt_asset.unity3d
       Dependencies: {}
     Info_4:
+      Name: shared_asset.unity3d
+      Dependencies: {}
+    Info_5:
       Name: vehicles.unity3d
       Dependencies:
         Dependency_0: texture_01.unity3d
-    Info_5:
+    Info_6:
       Name: texture_01.unity3d
       Dependencies: {}
-    Info_6:
+    Info_7:
       Name: mise.unity3d
       Dependencies:
         Dependency_0: texture_01.unity3d
-    Info_7:
-      Name: lobbyui.unity3d
-      Dependencies: {}

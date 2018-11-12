@@ -1,28 +1,40 @@
-ModularTest = require("ModularTest");
+
 TankCmp = require("LuaComponents/APCControllerCmp");
 
+require "Common/functions"
+require "Logic/CtrlManager"
+require "Controller/DemoCtrl"
+
 local APC = nil;
-local panel_demo = nil;
 
 --主入口函数。从这里开始lua逻辑
 function Main()					
-	print("logic start")	 		
-	ModularTest.Test();
+	print("==============Main =============================")	 		
 	
+	--GameUtil.SayHello();
+
+	--local intArray = {1,2,3,4,5,6,7,8,9,10};
+	--local sum_of_table = GameUtil.TestFloat( intArray );
+	--print("Sum form 1 to 10 is "..sum_of_table);
+
+	--LuaHelper = LuaFramework.LuaHelper;
+	--resMgr = LuaHelper.GetResManager();
+	--resMgr:LoadPrefab('vehicles',{'apc_01_a'},OnLoadFinish);
+
+	for i = 1, #PanelNames do
+		require ("View/"..tostring(PanelNames[i]))
+	end
 	
-	GameUtil.SayHello();
+	CtrlManager.Init();	
+	local demo_ctrl = CtrlManager.GetCtrl(CtrlNames.Demo);
 
-	local intArray = {1,2,3,4,5,6,7,8,9,10};
-	local sum_of_table = GameUtil.TestFloat( intArray );
-	print("Sum form 1 to 10 is "..sum_of_table);
-
-	LuaHelper = LuaFramework.LuaHelper;
-	resMgr = LuaHelper.GetResManager();
-	resMgr:LoadPrefab('vehicles',{'apc_01_a'},OnLoadFinish);
-
-	resMgr:LoadPrefab('lobbyUI',{'PanelDemo'},OnLoadUIFinish);	
+	if demo_ctrl ~= nil then
+		print('demo_ctrl is not null');
+		demo_ctrl:Awake();
+	end
 end
 
+--[[
 function OnLoadFinish(objs)
 	APC = UnityEngine.GameObject.Instantiate(objs[0]);
 	APC.transform.position = Vector3.New(0,0,2);
@@ -30,6 +42,7 @@ function OnLoadFinish(objs)
 	LuaFramework.Util.Log("Load APC Finish Hp is "..TankCmp.Hp);	
 	local apc_ctrl = LuaComponent.Add( APC, TankCmp );
 end
+
 
 function  OnLoadUIFinish(objs)
 	panel_demo = UnityEngine.GameObject.Instantiate( objs[0] );
@@ -43,10 +56,11 @@ function  OnLoadUIFinish(objs)
 	UIEvent.AddButtonClick( btn, OnClick );
 end
 
+
 function OnClick()
 	print("触发按钮事件");
 end
-
+]]
 
 --场景切换通知
 function OnLevelWasLoaded(level)

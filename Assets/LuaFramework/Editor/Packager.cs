@@ -163,18 +163,17 @@ public class Packager {
 
         AddBuildMap("prompt" + AppConst.ExtName, "*.prefab", "Assets/LuaFramework/Examples/Builds/Prompt");
         AddBuildMap("message" + AppConst.ExtName, "*.prefab", "Assets/LuaFramework/Examples/Builds/Message");
+        //my demo panel
+        AddBuildMap("demo" + AppConst.ExtName, "*.prefab", "Assets/LuaFramework/Examples/Builds/Demo");
 
         AddBuildMap("prompt_asset" + AppConst.ExtName, "*.png", "Assets/LuaFramework/Examples/Textures/Prompt");
         AddBuildMap("shared_asset" + AppConst.ExtName, "*.png", "Assets/LuaFramework/Examples/Textures/Shared");
 
-        //AddBuildMap("vehicle_fbx" + AppConst.ExtName, "*.fbx", "Assets/Lobby/Tanks/Apc/");
-        //AddBuildMap("vehicle_tex" + AppConst.ExtName, "*.png", "Assets/Lobby/Tanks/Apc/");
-        //AddBuildMap("vehicle_mat" + AppConst.ExtName, "*.mat", "Assets/Lobby/Tanks/Apc/");
-        AddBuildMap("vehicles" + AppConst.ExtName, "*.prefab", "Assets/Lobby/Tanks/Apc/");
         AddBuildMap("texture_01" + AppConst.ExtName, "*.png", "Assets/Lobby/Tanks/Tex/");
+        AddBuildMap("vehicles" + AppConst.ExtName, "*.prefab", "Assets/Lobby/Tanks/Apc/");        
         AddBuildMap("mise" + AppConst.ExtName, "*.prefab", "Assets/Lobby/Tanks/Mise/");
 
-        AddBuildMap("LobbyUI" + AppConst.ExtName, "*.prefab", "Assets/Lobby/UI");
+        
     }
 
     /// <summary>

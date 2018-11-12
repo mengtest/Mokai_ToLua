@@ -1,15 +1,17 @@
 require "Common/define"
 require "Controller/PromptCtrl"
 require "Controller/MessageCtrl"
+require "Controller/DemoCtrl"
 
 CtrlManager = {};
 local this = CtrlManager;
 local ctrlList = {};	--控制器列表--
 
 function CtrlManager.Init()
-	logWarn("CtrlManager.Init----->>>");
+	--logWarn("CtrlManager.Init----->>>");
 	ctrlList[CtrlNames.Prompt] = PromptCtrl.New();
 	ctrlList[CtrlNames.Message] = MessageCtrl.New();
+	ctrlList[CtrlNames.Demo] = DemoCtrl.New();
 	return this;
 end
 
@@ -30,5 +32,5 @@ end
 
 --关闭控制器--
 function CtrlManager.Close()
-	logWarn('CtrlManager.Close---->>>');
+	--logWarn('CtrlManager.Close---->>>');
 end
